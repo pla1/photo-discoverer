@@ -1,0 +1,15 @@
+{
+    "architecture": "all",
+    "description": "Discover photos",
+    "framework": "ubuntu-sdk-14.10",
+    "hooks": {
+        "app": {
+            "apparmor": "PhotoDiscoverer.apparmor",
+            "desktop": "PhotoDiscoverer.desktop"
+        }
+    },
+    "maintainer": "Patrick L Archibald (PLA) <Patrick.Archibald@gmail.com>",
+    "name": "photo-discoverer.pla",
+    "title": "Photo Discoverer",
+    "version": "1.0.0"
+}

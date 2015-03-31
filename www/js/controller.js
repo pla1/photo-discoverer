@@ -44,12 +44,10 @@ pdApp.directive("loadingIndicator", function() {
 
 
 pdApp.controller('pdController', [ '$scope', '$http', 'CONSTANTS', function($scope, $http, CONSTANTS) {
-
-
     $scope.fiveHundredPixFeatures = [{name:"editors"},{name:"popular"},{name:"upcoming"},{name:"fresh_today"},{name:"fresh_yesterday"},{name:"fresh_week"}];
     $scope.fiveHundredPixCategories = [{name:"Uncategorized"},{name:"Abstract"},{name:"Animals"},{name:"Black and White"},{name:"Celebrities"},{name:"City and Architecture"},{name:"Commercial"},{name:"Concert"},{name:"Family"},{name:"Fashion"},{name:"Film"},{name:"Fine Art"},{name:"Food"},{name:"Journalism"},{name:"Landscapes"},{name:"Macro"},{name:"Nature"},{name:"Nude"},{name:"People"},{name:"Performing Arts"},{name:"Sport"},{name:"Still Life"},{name:"Street"},{name:"Transportation"},{name:"Travel"},{name:"Underwater"},{name:"Urban Exploration"},{name:"Wedding"}];
     $scope.selectedFeature=storageGet("selectedFeature","editors");
-    $scope.selectedCategory=storageGet("selectedCategory","Uncategorized");
+    $scope.selectedCategory=storageGet("selectedCategory","Animals");
     $scope.selectedQuantity=storageGet("selectedQuantity",10);
     $scope.selectedSize=storageGet("selectedSize",3);
     $scope.pdPhotos = function() {

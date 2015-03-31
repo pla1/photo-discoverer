@@ -4,6 +4,7 @@
     <title>Photo Discoverer</title>
     <script src="js/angular.js"></script>
     <script src="js/controller.js"></script>
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
     <style>
       .listContainer {
         float: left;
@@ -11,9 +12,11 @@
     </style>
   </head>
   <body>
-      <p>Feature:  <select ng-model="selectedFeature" ng-options="item.name as item.name for item in fiveHundredPixFeatures" ng-change="pdPhotos()"></select>
-         Category: <select ng-model="selectedCategory" ng-options="item.name as item.name for item in fiveHundredPixCategories" ng-change="pdPhotos()"></select>
-         Quantity: <select ng-model="selectedQuantity" ng-change="pdPhotos()">
+      <div class="option">Feature:  <select ng-model="selectedFeature" ng-options="item.name as item.name for item in fiveHundredPixFeatures" ng-change="pdPhotos()"></select>
+      </div>
+      <div class="option">Category: <select ng-model="selectedCategory" ng-options="item.name as item.name for item in fiveHundredPixCategories" ng-change="pdPhotos()"></select>
+      </div>
+      <div class="option">Quantity: <select ng-model="selectedQuantity" ng-change="pdPhotos()">
                      <option>10</option>
                      <option>20</option>
                      <option>30</option>
@@ -25,7 +28,8 @@
                      <option>90</option>
                      <option>100</option>
                    </select>
-         Size:     <select ng-model="selectedSize" ng-change="pdPhotos()">
+      </div>
+      <div class="option">Size:     <select ng-model="selectedSize" ng-change="pdPhotos()">
                      <option value=1>70x70</option>
                      <option value=100>100x100</option>
                      <option value=2>140x140</option>
@@ -38,6 +42,7 @@
                      <option value=1600>1600 on longest edge</option>
                      <option value=2048>2048 on longest edge</option>
                    </select>
+      </div>
       <div class="listContainer" ng-repeat="item in items">
         <img ng-src="{{item.image_url}}">
       <div>
